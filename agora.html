@@ -22,44 +22,63 @@
   </header>
 
   <main class="container">
-    <h2 class="section-title">KryptografiaAPI</h2>
+    <h2 class="section-title">AgoraAPI</h2>
 
 
-<!-- KRYPTO -->
+<!-- AGORA -->
         <div class="card horizontal">
         <div class="card-content">
             <h3>Opis</h3>
-            <p>Projekt demonstracyjny API umożliwiającego szyfrowanie i deszyfrowanie wiadomości za pomocą różnych algorytmów klasycznych oraz współczesnych (AES, RSA, SHA-256, Vigenère, Cezar),
-                a także steganografię — ukrywanie wiadomości i obrazów w innych obrazach.</p>
+            <p>Projekt Agora to prosty backend do forum internetowego, który umożliwia użytkownikom rejestrację,
+                 zażądzanie profilem, logowanie, tworzenie wątków i postów oraz zarządzanie nimi.</p>
             <div>
             <strong>Technologie:</strong>
             <ul class="tech-list">
                 <li>C# 12, .NET 8.0 (ASP.NET Core WebAPI)</li>
-                <li>Algorytmy kryptograficzne: AES, RSA, SHA-256, Vigenère, Cezar</li>
-                <li>Steganografia: LSB w obrazach PNG (ImageSharp)</li>
+                <li>REST, JSON, obsługa plików</li>
+                <li>Dependency Injection: .NET Core DI</li>
                 <li>Dokumentacja: Swagger / OpenAPI (Swashbuckle)</li>
+                <li>Baza danych: Azure SQL Database</li>
+                <li>Zdjęcia: Azure Blob Storage</li>
+                <li>Testowanie: xUnit, Moq, Microsoft.AspNetCore.Identity</li>
                 <li>Logowanie: Serilog</li>
                 <li>Konteneryzacja: Docker</li>
                 <li>Kontrola wersji: Git</li>
-                <li>Frontend: Html/Css/Typescript</li>
             </ul>
 
             <strong>Hostowanie:</strong>
             <p>Hosting w platformie azure za pomocą azure Container app.</p>
             </div>
-            <a href="https://github.com/Soommer/kryptografia" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-backend
+            <strong>Frontend: </strong>
+            <p>React/ Typescript</p>
+            <p>Obsługa tokenów</p>
+            <a href="https://github.com/Soommer/Agora/tree/master/Agora" target="_blank" class="repo-link">
+                <i class="fab fa-github"></i> Repozytorium-Agora-backend
             </a>
 
-            <a href="https://github.com/Soommer/krypto-front" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-frontend
+            <a href="https://agorabackend.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/swagger/index.html" target="_blank" class="repo-link">
+                <i class="fa-solid fa-cloud"></i> Swagger
+            </a>
+
+              <a href="https://github.com/Soommer/Agora/tree/master/Agora.Tests" target="_blank" class="repo-link">
+                <i class="fab fa-github"></i> Repozytorium-Agora-testy
+            </a>
+            
+            <br>
+
+
+            <a href="https://github.com/Soommer/agoraFront" target="_blank" class="repo-link">
+                <i class="fab fa-github"></i> Repozytorium-Agora-frontend
             </a>
 
             <a href="https://kryptografia-front.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io" target="_blank" class="repo-link">
                 <i class="fa-solid fa-cloud"></i> Demo w Azure
             </a>
         </div>
-        <img src="assets/project1.png" alt="KryptografiaAPI" />
+        <div class="image-stack">
+            <img src="assets/project5.png" alt="Zrzut ekranu 1">
+            <img src="assets/project6.png" alt="Zrzut ekranu 2">
+        </div>
         </div>
 
   </main>
