@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Projekty – Piotr.dev</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Piotr.dev</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">O mnie</a>
+      <a href="krypto.html">KryptografiaAPI</a>
+      <a href="sklep.html">SklepAPI</a>
+      <a href="agora.html">AgoraApi</a>
+
+
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">KryptografiaAPI</h2>
+
+
+<!-- KRYPTO -->
+        <div class="card horizontal">
+        <div class="card-content">
+            <h3>Opis</h3>
+            <p>Projekt demonstracyjny API umożliwiającego szyfrowanie i deszyfrowanie wiadomości za pomocą różnych algorytmów klasycznych oraz współczesnych (AES, RSA, SHA-256, Vigenère, Cezar),
+                a także steganografię — ukrywanie wiadomości i obrazów w innych obrazach.</p>
+            <div>
+            <strong>Technologie:</strong>
+            <ul class="tech-list">
+                <li>C# 12, .NET 8.0 (ASP.NET Core WebAPI)</li>
+                <li>Algorytmy kryptograficzne: AES, RSA, SHA-256, Vigenère, Cezar</li>
+                <li>Steganografia: LSB w obrazach PNG (ImageSharp)</li>
+                <li>Dokumentacja: Swagger / OpenAPI (Swashbuckle)</li>
+                <li>Logowanie: Serilog</li>
+                <li>Konteneryzacja: Docker</li>
+                <li>Kontrola wersji: Git</li>
+                <li>Frontend: Html/Css/Typescript</li>
+            </ul>
+
+            <strong>Hostowanie:</strong>
+            <p>Hosting w platformie azure za pomocą azure Container app.</p>
+            </div>
+            <a href="https://github.com/Soommer/kryptografia" target="_blank" class="repo-link">
+                <i class="fab fa-github"></i> Repozytorium-backend
+            </a>
+
+            <a href="https://github.com/Soommer/krypto-front" target="_blank" class="repo-link">
+                <i class="fab fa-github"></i> Repozytorium-frontend
+            </a>
+
+            <a href="https://kryptografia-front.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io" target="_blank" class="repo-link">
+                <i class="fa-solid fa-cloud"></i> Demo w Azure
+            </a>
+        </div>
+        <img src="assets/project1.png" alt="KryptografiaAPI" />
+        </div>
+
+  </main>
+</body>
+</html>
