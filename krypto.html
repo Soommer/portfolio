@@ -2,66 +2,88 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Projekty – Piotr.dev</title>
+  <title>KryptografiaAPI – Piotr.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projekt KryptografiaAPI – szyfrowanie, haszowanie, steganografia. .NET 8, Swagger, Docker, Azure Container Apps.">
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <!-- Ikony (opcjonalnie) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="navbar">
+  <a href="#main" class="visually-hidden-focusable">Przejdź do treści</a>
+
+  <header class="navbar" role="navigation" aria-label="Główne">
     <div class="logo">Piotr.dev</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">O mnie</a>
-      <a href="krypto.html">KryptografiaAPI</a>
-      <a href="sklep.html">SklepAPI</a>
-      <a href="agora.html">AgoraApi</a>
-
-
+      <a class="link-underline" href="index.html">Home</a>
+      <a class="link-underline" href="about.html">O mnie</a>
+      <a class="link-underline" href="krypto.html" aria-current="page">KryptografiaAPI</a>
+      <a class="link-underline" href="sklep.html">SklepAPI</a>
+      <a class="link-underline" href="agora.html">AgoraAPI</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h2 class="section-title">KryptografiaAPI</h2>
+  <main id="main" class="container">
+    <section class="projects-section" aria-label="KryptografiaAPI" style="position: relative;">
+      <div class="blob" aria-hidden="true"></div>
 
+      <h1 class="section-title gradient-text">KryptografiaAPI</h1>
 
-<!-- KRYPTO -->
-        <div class="card horizontal">
+      <!-- Karta projektu -->
+      <article class="card horizontal fx">
         <div class="card-content">
-            <h3>Opis</h3>
-            <p>Projekt demonstracyjny API umożliwiającego szyfrowanie i deszyfrowanie wiadomości za pomocą różnych algorytmów klasycznych oraz współczesnych (AES, RSA, SHA-256, Vigenère, Cezar),
-                a także steganografię — ukrywanie wiadomości i obrazów w innych obrazach.</p>
-            <div>
+          <h3>Opis</h3>
+          <p>
+            Projekt demonstracyjny API do szyfrowania i deszyfrowania wiadomości z użyciem klasycznych i współczesnych
+            algorytmów (<strong>AES</strong>, <strong>RSA</strong>, <strong>SHA-256</strong>, <strong>Vigenère</strong>, <strong>Cezar</strong>),
+            oraz <strong>steganografii</strong> (ukrywanie wiadomości/obrazów w plikach PNG).
+          </p>
+
+          <div style="margin-top:.75rem;">
             <strong>Technologie:</strong>
             <ul class="tech-list">
-                <li>C# 12, .NET 8.0 (ASP.NET Core WebAPI)</li>
-                <li>Algorytmy kryptograficzne: AES, RSA, SHA-256, Vigenère, Cezar</li>
-                <li>Steganografia: LSB w obrazach PNG (ImageSharp)</li>
-                <li>Dokumentacja: Swagger / OpenAPI (Swashbuckle)</li>
-                <li>Logowanie: Serilog</li>
-                <li>Konteneryzacja: Docker</li>
-                <li>Kontrola wersji: Git</li>
-                <li>Frontend: Html/Css/Typescript</li>
+              <li>C# 12, .NET 8 (ASP.NET Core Web API)</li>
+              <li>Algorytmy: AES, RSA, SHA-256, Vigenère, Cezar</li>
+              <li>Steganografia: LSB w PNG (ImageSharp)</li>
+              <li>Dokumentacja: Swagger / OpenAPI (Swashbuckle)</li>
+              <li>Logowanie: Serilog</li>
+              <li>Konteneryzacja: Docker</li>
+              <li>Kontrola wersji: Git</li>
+              <li>Frontend: HTML / CSS / TypeScript</li>
             </ul>
 
             <strong>Hostowanie:</strong>
-            <p>Hosting w platformie azure za pomocą azure Container app.</p>
-            </div>
-            <a href="https://github.com/Soommer/kryptografia" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-backend
-            </a>
+            <p>Azure Container Apps (kontener z backendem i frontendem).</p>
+          </div>
 
-            <a href="https://github.com/Soommer/krypto-front" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-frontend
+          <p style="margin-top:.75rem; display:flex; gap:1rem; flex-wrap:wrap;">
+            <a class="link-underline repo-link" href="https://github.com/Soommer/kryptografia" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Repozytorium – backend
             </a>
-
-            <a href="https://kryptografia-front.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io" target="_blank" class="repo-link">
-                <i class="fa-solid fa-cloud"></i> Demo w Azure
+            <a class="link-underline repo-link" href="https://github.com/Soommer/krypto-front" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Repozytorium – frontend
             </a>
+            <a class="link-underline repo-link" href="https://kryptografia-front.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cloud"></i> Demo w Azure
+            </a>
+          </p>
         </div>
-        <img src="assets/project1.png" alt="KryptografiaAPI" />
-        </div>
 
-  </main>
+        <img src="assets/project1.png" alt="Zrzut ekranu aplikacji KryptografiaAPI" loading="lazy" />
+      </article>
+
+    
+
+  <!-- SR-only helper (jak na pozostałych stronach) -->
+  <style>
+    .visually-hidden-focusable {
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .visually-hidden-focusable:focus {
+      position:static; width:auto; height:auto; padding:.5rem; background:#fff3; outline:2px solid #0003;
+    }
+    /* Drobna poprawka spacingu linków repo jeśli chcesz bez inline-style: */
+    .repo-link { display:inline-flex; align-items:center; gap:.4rem; font-weight:500; }
+  </style>
 </body>
 </html>

@@ -4,50 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Piotr Dmochowski | Portfolio</title>
+  <meta name="description" content="Portfolio Piotra Dmochowskiego – backend .NET, API, Azure, projekty open-source.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
+  <a href="#main" class="visually-hidden-focusable">Przejdź do treści</a>
+
+  <header class="navbar" role="navigation" aria-label="Główne">
     <div class="logo">Piotr.dev</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">O mnie</a>
-      <a href="krypto.html">KryptografiaAPI</a>
-      <a href="sklep.html">SklepAPI</a>
-      <a href="agora.html">AgoraApi</a>
-
-      
+      <a class="link-underline" href="index.html" aria-current="page">Home</a>
+      <a class="link-underline" href="about.html">O mnie</a>
+      <a class="link-underline" href="krypto.html">KryptografiaAPI</a>
+      <a class="link-underline" href="sklep.html">SklepAPI</a>
+      <a class="link-underline" href="agora.html">AgoraAPI</a>
     </nav>
   </header>
 
-  <main class="container hero">
-  <div class="text">
-    <h1>Hej, jestem <span>Piotr</span></h1>
-    <p>Rozwijam się jako Backend Developer z ukierunkowaniem na .NET i projektowanie API. Tworzę projekty pozwalające mi doskonalić integracje z systemami płatności,
-       pracę z chmurą Azure, komunikację w czasie rzeczywistym oraz wdrażanie rozwiązań e-commerce.</p>
-    <a href="about.html" class="btn">Więcej o mnie →</a>
-  </div>
-  <img src="assets/avatar.png" alt="Piotr Dmochowski">
-  <section class="container">
-  <h2 class="section-title">Moje projekty</h2>
-  <div class="thumbnail-gallery">
-    <a href="krypto.html" target="_blank" class="thumb">
-      <img src="assets/project1.png" alt="KebabStoreAPI">
-      <span>KryptografiaAPI</span>
-    </a>
-    <a href="assets/project2.png" target="_blank" class="thumb">
-      <img src="assets/project2.png" alt="KryptografiaAPI">
-      <span>SklepAPI</span>
-    </a>
-    <a href="assets/project3.png" target="_blank" class="thumb">
-      <img src="assets/project3.png" alt="AgoraAPI">
-      <span>AgoraAPI</span>
-    </a>
-  </div>
-</section>
-</main>
+  <main id="main" class="container">
+    <!-- HERO -->
+    <section class="hero hero-bg" aria-label="Wprowadzenie">
+      <div class="text">
+        <h1 class="gradient-text">Cześć! Nazywam się  <span>Piotr Dmochowski</span></h1>
+        <p>
+          Rozwijam się jako <strong>Backend Developer</strong> z ukierunkowaniem na <strong>.NET</strong> i projektowanie API.
+          Tworzę projekty pozwalające mi doskonalić swoję umiejętności z zakresu backend develpmentu, pracę z chmurą <strong>Azure</strong>
+           .
+        </p>
+        <a href="about.html" class="btn">Więcej o mnie →</a>
+      </div>
 
+      <span class="avatar-wrap" aria-hidden="true">
+        <img src="assets/avatar.png" alt="Zdjęcie profilowe" width="300" height="300" loading="eager">
+      </span>
+    </section>
 
+    <!-- PROJEKTY -->
+    <section class="projects-section" aria-label="Moje projekty" style="position: relative;">
+      <div class="blob" aria-hidden="true"></div>
+      <h2 class="section-title">Moje projekty</h2>
 
+      <div class="thumbnail-gallery">
+        <a href="krypto.html" class="thumb">
+          <img src="assets/project1.png" alt="Podgląd projektu KryptografiaAPI" loading="lazy">
+          <span>KryptografiaAPI</span>
+        </a>
+
+        <a href="sklep.html" class="thumb">
+          <img src="assets/project2.png" alt="Podgląd projektu SklepAPI" loading="lazy">
+          <span>SklepAPI</span>
+        </a>
+
+        <a href="agora.html" class="thumb">
+          <img src="assets/project3.png" alt="Podgląd projektu AgoraAPI" loading="lazy">
+          <span>AgoraAPI</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  
+  <style>
+    .visually-hidden-focusable {
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .visually-hidden-focusable:focus {
+      position:static; width:auto; height:auto; padding:.5rem; background:#fff3; outline:2px solid #0003;
+    }
+  </style>
 </body>
 </html>

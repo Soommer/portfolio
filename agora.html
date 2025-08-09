@@ -2,85 +2,103 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Projekty – Piotr.dev</title>
+  <title>AgoraAPI – Piotr.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AgoraAPI – backend forum internetowego w .NET 8: rejestracja, logowanie, posty, wątki, zarządzanie profilem.">
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header class="navbar">
+  <a href="#main" class="visually-hidden-focusable">Przejdź do treści</a>
+
+  <header class="navbar" role="navigation" aria-label="Główne">
     <div class="logo">Piotr.dev</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">O mnie</a>
-      <a href="krypto.html">KryptografiaAPI</a>
-      <a href="sklep.html">SklepAPI</a>
-      <a href="agora.html">AgoraApi</a>
-
-
+      <a class="link-underline" href="index.html">Home</a>
+      <a class="link-underline" href="about.html">O mnie</a>
+      <a class="link-underline" href="krypto.html">KryptografiaAPI</a>
+      <a class="link-underline" href="sklep.html">SklepAPI</a>
+      <a class="link-underline" href="agora.html" aria-current="page">AgoraAPI</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h2 class="section-title">AgoraAPI</h2>
+  <main id="main" class="container">
+    <section class="projects-section" aria-label="AgoraAPI" style="position: relative;">
+      <div class="blob" aria-hidden="true"></div>
 
+      <h1 class="section-title gradient-text">AgoraAPI</h1>
 
-<!-- AGORA -->
-        <div class="card horizontal">
+      <!-- Karta projektu -->
+      <article class="card horizontal fx">
         <div class="card-content">
-            <h3>Opis</h3>
-            <p>Projekt Agora to prosty backend do forum internetowego, który umożliwia użytkownikom rejestrację,
-                 zażądzanie profilem, logowanie, tworzenie wątków i postów oraz zarządzanie nimi.</p>
-            <div>
+          <h3>Opis</h3>
+          <p>
+            Backend forum internetowego umożliwiający rejestrację użytkowników, logowanie, 
+            zarządzanie profilem, tworzenie wątków i postów oraz ich moderację.  
+            Projekt zawiera pełną obsługę JWT, zarządzanie obrazami w <strong>Azure Blob Storage</strong>, 
+            dokumentację API w <strong>Swagger</strong> oraz testy jednostkowe i integracyjne.
+          </p>
+
+          <div style="margin-top:.75rem;">
             <strong>Technologie:</strong>
             <ul class="tech-list">
-                <li>C# 12, .NET 8.0 (ASP.NET Core WebAPI)</li>
-                <li>REST, JSON, obsługa plików</li>
-                <li>Dependency Injection: .NET Core DI</li>
-                <li>Dokumentacja: Swagger / OpenAPI (Swashbuckle)</li>
-                <li>Baza danych: Azure SQL Database</li>
-                <li>Zdjęcia: Azure Blob Storage</li>
-                <li>Testowanie: xUnit, Moq, Microsoft.AspNetCore.Identity</li>
-                <li>Logowanie: Serilog</li>
-                <li>Konteneryzacja: Docker</li>
-                <li>Kontrola wersji: Git</li>
+              <li>C# 12, .NET 8 (ASP.NET Core Web API)</li>
+              <li>REST, JSON, obsługa plików</li>
+              <li>Dependency Injection (.NET Core DI)</li>
+              <li>Dokumentacja: Swagger / OpenAPI (Swashbuckle)</li>
+              <li>Baza danych: Azure SQL Database</li>
+              <li>Przechowywanie obrazów: Azure Blob Storage</li>
+              <li>Testy: xUnit, Moq</li>
+              <li>Autoryzacja: Microsoft.AspNetCore.Identity + JWT</li>
+              <li>Logowanie: Serilog</li>
+              <li>Konteneryzacja: Docker</li>
+              <li>Kontrola wersji: Git</li>
             </ul>
 
             <strong>Hostowanie:</strong>
-            <p>Hosting w platformie azure za pomocą azure Container app.</p>
-            </div>
-            <strong>Frontend: </strong>
-            <p>React/ Typescript</p>
-            <p>Obsługa tokenów</p>
-            <a href="https://github.com/Soommer/Agora/tree/master/Agora" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-Agora-backend
-            </a>
+            <p>Azure Container Apps (backend), Azure Static Web Apps (frontend).</p>
 
-            <a href="https://agorabackend.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/swagger/index.html" target="_blank" class="repo-link">
-                <i class="fa-solid fa-cloud"></i> Swagger
-            </a>
+            <strong>Frontend:</strong>
+            <p>React / TypeScript (obsługa JWT, integracja z API).</p>
+          </div>
 
-              <a href="https://github.com/Soommer/Agora/tree/master/Agora.Tests" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-Agora-testy
+          <!-- Linki -->
+          <div style="margin-top:.75rem; display:flex; gap:1rem; flex-wrap:wrap;">
+            <a class="link-underline repo-link" href="https://github.com/Soommer/Agora/tree/master/Agora" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Repozytorium – backend
             </a>
-            
-            <br>
-
-
-            <a href="https://github.com/Soommer/agoraFront" target="_blank" class="repo-link">
-                <i class="fab fa-github"></i> Repozytorium-Agora-frontend
+            <a class="link-underline repo-link" href="https://agorabackend.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io/swagger/index.html" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cloud"></i> Swagger (API)
             </a>
-
-            <a href="https://kryptografia-front.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io" target="_blank" class="repo-link">
-                <i class="fa-solid fa-cloud"></i> Demo w Azure
+            <a class="link-underline repo-link" href="https://github.com/Soommer/Agora/tree/master/Agora.Tests" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Repozytorium – testy
             </a>
+            <a class="link-underline repo-link" href="https://github.com/Soommer/agoraFront" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> Repozytorium – frontend
+            </a>
+            <a class="link-underline repo-link" href="https://kryptografia-front.wonderfulsand-657cf16a.polandcentral.azurecontainerapps.io" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cloud"></i> Demo (Azure)
+            </a>
+          </div>
         </div>
+
         <div class="image-stack">
-            <img src="assets/project5.png" alt="Zrzut ekranu 1">
-            <img src="assets/project6.png" alt="Zrzut ekranu 2">
+          <img src="assets/project5.png" alt="Widok: lista wątków na forum" loading="lazy">
+          <img src="assets/project6.png" alt="Widok: formularz tworzenia nowego posta" loading="lazy">
         </div>
-        </div>
-
+      </article>
+    </section>
   </main>
+
+  <!-- SR helper -->
+  <style>
+    .visually-hidden-focusable {
+      position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;
+    }
+    .visually-hidden-focusable:focus {
+      position:static; width:auto; height:auto; padding:.5rem; background:#fff3; outline:2px solid #0003;
+    }
+    .repo-link { display:inline-flex; align-items:center; gap:.4rem; font-weight:500; }
+  </style>
 </body>
 </html>

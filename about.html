@@ -3,51 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <title>O mnie – Piotr.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="O mnie – Backend .NET, API, Azure, Python, Linux, podstawy networkingu (CCNA).">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
+  <a href="#main" class="visually-hidden-focusable">Przejdź do treści</a>
+
+  <header class="navbar" role="navigation" aria-label="Główne">
     <div class="logo">Piotr.dev</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">O mnie</a>
-      <a href="krypto.html">KryptografiaAPI</a>
-      <a href="sklep.html">SklepAPI</a>
-      <a href="agora.html">AgoraApi</a>
-
+      <a class="link-underline" href="index.html">Home</a>
+      <a class="link-underline" href="about.html" aria-current="page">O mnie</a>
+      <a class="link-underline" href="krypto.html">KryptografiaAPI</a>
+      <a class="link-underline" href="sklep.html">SklepAPI</a>
+      <a class="link-underline" href="agora.html">AgoraAPI</a>
     </nav>
   </header>
 
-<main class="container">
-  <h2 class="section-title">O mnie</h2>
-  <p class="about-text">
-    Cześć! Nazywam się <strong>Piotr Dmochowski</strong> i rozwijam się jako <strong>Backend Developer</strong> 
-    z ukierunkowaniem na technologię <strong>.NET</strong> oraz projektowanie API.  
-    Realizuję projekty, które pozwalają mi ćwiczyć integracje z systemami płatności, pracę z chmurą 
-    <strong>Azure</strong>, obsługę komunikacji w czasie rzeczywistym oraz implementację rozwiązań e-commerce.  
-    Posługuję się także <strong>Pythonem</strong> przy automatyzacji i analizie danych, pracuję w środowisku <strong>Linux</strong>  
-    i mam podstawową wiedzę z zakresu <strong>networkingu</strong> (CCNA: przełączanie, routing, sieci bezprzewodowe).
-    Chcę rozwijać swoje umiejętności w tworzeniu bezpiecznego i wydajnego oprogramowania oraz w obszarach DevOps.
-  </p>
+  <main id="main" class="container">
+    <!-- O MNIE -->
+    <section class="about-section" aria-label="O mnie" style="position: relative;">
+      <div class="blob" aria-hidden="true"></div>
 
-  <h2 class="section-title">Umiejętności techniczne</h2>
-  <div class="skills-grid">
-    <div class="skill-card">.NET 6/7/8 (C#)</div>
-    <div class="skill-card">Entity Framework Core</div>
-    <div class="skill-card">SignalR (real-time)</div>
-    <div class="skill-card">Azure: Container Apps, Blob Storage, Maps API</div>
-    <div class="skill-card">PostgreSQL / SQL Server</div>
-    <div class="skill-card">Unit Tests (xUnit, Moq)</div>
-    <div class="skill-card">Docker, Git, GitHub Actions</div>
-    <div class="skill-card">JavaScript / TypeScript</div>
-    <div class="skill-card">Angular / React</div>
-    <div class="skill-card">HTML/CSS</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">Linux</div>
-    <div class="skill-card">
-      CCNA: Switching, Routing & Wireless Fundamentals
-    </div>
-  </div>
-</main>
+      <h1 class="section-title gradient-text">O mnie</h1>
+      <p class="about-text reveal">
+        Cześć! Nazywam się <strong>Piotr Dmochowski</strong> i rozwijam się jako <strong>Backend Developer</strong>
+        z ukierunkowaniem na technologię <strong>.NET</strong> oraz projektowanie API.
+        Realizuję projekty, które pozwalają mi ćwiczyć integracje z systemami płatności, pracę z chmurą
+        <strong>Azure</strong>, obsługę komunikacji w czasie rzeczywistym oraz wdrażanie rozwiązań e-commerce.
+        Posługuję się także <strong>Pythonem</strong> przy automatyzacji i analizie danych, pracuję w środowisku <strong>Linux</strong>
+        i mam podstawową wiedzę z zakresu <strong>networkingu</strong> (CCNA: przełączanie, routing, sieci bezprzewodowe).
+        Chcę rozwijać swoje umiejętności w tworzeniu bezpiecznego i wydajnego oprogramowania oraz w obszarach DevOps.
+      </p>
+
+
+    </section>
+
+    <!-- UMIEJĘTNOŚCI -->
+    <section class="skills-section" aria-label="Umiejętności techniczne">
+      <h2 class="section-title">Umiejętności techniczne</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">.NET 6/7/8 (C#)</div>
+        <div class="skill-card">Entity Framework Core</div>
+        <div class="skill-card">SignalR (real-time)</div>
+        <div class="skill-card">Azure: Container Apps, Blob Storage, Maps/Power BI</div>
+        <div class="skill-card">PostgreSQL / SQL Server</div>
+        <div class="skill-card">Unit Tests (xUnit, Moq)</div>
+        <div class="skill-card">Docker, Git, GitHub Actions</div>
+        <div class="skill-card">JavaScript / TypeScript</div>
+        <div class="skill-card">Angular / React</div>
+        <div class="skill-card">HTML / CSS</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Linux</div>
+        <div class="skill-card">CCNA: Switching, Routing & Wireless</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SR-only helper (jak w index) -->
+  <style>
+    .visually-hidden-focusable {
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .visually-hidden-focusable:focus {
+      position:static; width:auto; height:auto; padding:.5rem; background:#fff3; outline:2px solid #0003;
+    }
+  </style>
 </body>
 </html>
