@@ -356,8 +356,7 @@ a.link-underline:hover::after{ width:100%; }
   animation: spin 8s linear infinite;
   display:inline-block;
 }
-.avatar-wrap img{ display:block; border-radius:50%; }
-@keyframes spin { to{ transform: rotate(360deg); } }
+
 
 .skill-card{ position:relative; overflow:hidden; }
 .skill-card::after{
